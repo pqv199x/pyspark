@@ -2,7 +2,6 @@ import requests
 import yaml
 config = yaml.safe_load(open("./config.yml"))
 
-print(config.get('bot_token', ''))
 
 def telegram_bot_sendtext(bot_message):
 
@@ -16,5 +15,5 @@ def telegram_bot_sendtext(bot_message):
    return response.json()
 
 
-test = telegram_bot_sendtext("Testing Telegram bot")
+test = telegram_bot_sendtext("Testing Telegram bot: %s" % "ha ha ha")
 print(test)
